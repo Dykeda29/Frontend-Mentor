@@ -1,0 +1,326 @@
+/* Variables CSS para mantener colores y fuentes consistentes */
+:root {
+  --color-primary: hsl(171, 66%, 44%);
+  --color-primary-hover: hsl(171, 66%, 54%);
+  --color-secondary: hsl(233, 100%, 69%);
+  --color-secondary-hover: hsl(233, 100%, 79%);
+  --color-dark-text: hsl(210, 10%, 33%);
+  --color-light-text: hsl(201, 11%, 66%);
+  --font-family: 'Bai Jamjuree', sans-serif;
+}
+
+/* Reset y estilos base para body y fuentes */
+body {
+  font-family: var(--font-family);
+  font-size: 1rem; /* Usa rem para escalabilidad */
+  margin: 0;
+  max-width: 1440px; /* Limita el ancho máximo para que no se expanda demasiado */
+  padding: 0 20px; /* Pequeño padding para que no quede pegado al borde */
+  box-sizing: border-box;
+}
+
+/* === Sección Hero === */
+.hero {
+  position: relative;
+  background-image: url("images/bg-header-desktop.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 1rem 3rem; /* Padding adaptado en rem */
+}
+
+/* Logo */
+.hero img {
+  width: 70px;
+  height: 70px;
+}
+
+/* Título principal */
+.hero h1 {
+  padding-top: 1.25rem; /* 20px */
+  font-size: 2.5rem; /* 40px en rem */
+  color: var(--color-dark-text);
+  margin-bottom: 0;
+}
+
+/* Párrafo */
+.hero p {
+  color: var(--color-light-text);
+  margin: 0 17rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Contenedor de botones */
+.botones {
+  margin-top: 1rem; /* Separación arriba */
+  display: flex;
+  gap: 1.875rem; /* 30px espacio entre botones */
+  justify-content: center;
+}
+
+/* Estilo base para botones */
+button {
+  border: none;
+  border-radius: 24px;
+  padding: 0.9375rem 2rem; /* 15px arriba/abajo y 32px izquierda/derecha */
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: var(--font-family);
+  transition: background-color 0.3s ease;
+}
+
+/* Botón iOS */
+button.ios {
+  background-color: var(--color-primary);
+}
+button.ios:hover,
+button.ios:focus {
+  background-color: var(--color-primary-hover);
+}
+
+/* Botón Mac */
+button.mac {
+  background-color: var(--color-secondary);
+}
+button.mac:hover,
+button.mac:focus {
+  background-color: var(--color-secondary-hover);
+}
+
+/* === Sección Snippets === */
+.top_snippets {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 0 1rem 3.75rem; /* Reduce padding lateral para mejor responsividad */
+  max-width: 700px; /* Limita ancho para mejor lectura */
+  margin: 0 auto; /* Centrar horizontalmente */
+}
+
+/* Título secundario */
+.top_snippets h2 {
+  color: var(--color-dark-text);
+  font-size: 1.5625rem; /* 25px en rem */
+}
+
+.snippets h3{
+  color: var(--color-dark-text);
+}
+
+/* Texto descriptivo */
+.top_snippets p {
+  color: var(--color-light-text);
+  margin:0;
+}
+
+/* Contenedor de la imagen y lista de funcionalidades */
+.computer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem; /* Espacio entre imagen y lista */
+  flex-wrap: wrap; /* Para que se adapte en pantallas pequeñas */
+  padding: 0 1rem rem;
+}
+
+/* Imagen */
+.computer img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+}
+
+/* Lista de características */
+.list {
+  display: flex;
+  flex-direction: column;
+  padding: 4.375rem 1rem; /* 70px arriba/abajo */
+  max-width: 400px; /* Limita el ancho para mejor lectura */
+}
+
+/* Títulos en lista */
+.search h2,
+.sync h2,
+.history h2 {
+  color: var(--color-dark-text);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+/* Párrafos en lista */
+.search p,
+.sync p,
+.history p {
+  color: var(--color-light-text);
+  margin-bottom: 2rem; /* Espacio entre items */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Ajusta layout de la sección snippets */
+  .computer {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Imagen más pequeña y adaptativa */
+  .computer img {
+    max-width: 90%;
+  }
+  /* Reduce padding en lista */
+  .list {
+    padding: 2rem 1rem;
+    max-width: 100%;
+  }
+  /* Reduce padding lateral en top snippets */
+  .top_snippets {
+    padding: 0 1rem 3rem;
+  }
+}
+
+/**Section de Clipboard**/
+
+
+.clipboard{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem 0;
+}
+
+
+.clipboard h2{
+    color: var(--color-dark-text);
+    font-size: 1.5625rem;
+    padding-bottom: 1.25rem
+}
+
+.clipboard p{
+    color: var(--color-light-text);
+    padding-bottom: 2rem;
+}
+
+
+.clipboard img{
+  max-width: 600px;
+  width: 90%;
+  height: auto;
+}
+
+.workflow{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: stretch;
+}
+
+.workflow div{
+    flex: 1; /* todas las columnas ocupan el mismo ancho */
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.workflow h2{
+    color:var(--color-dark-text)
+}
+
+.workflow p{
+    color: var(--color-light-text);
+}
+
+.productivity{
+    display: flex;
+    justify-content: center; /* centra todo horizontalmente */
+    align-items: stretch; /* iguala la altura de todos los hijos */
+    gap: 2rem; /* espacio entre columnas */
+    padding: 3rem;
+    text-align: center;
+}
+
+.productivity > article{
+    flex: 1; /* mismo ancho para todos */
+    padding: 1.5rem;
+    flex-direction: column; /* icono arriba, texto abajo */
+    justify-content: flex-start; /* contenido desde arriba */
+}
+
+.productivity h3{
+  color: var(--color-dark-text);
+}
+
+.productivity p{
+  color: var(--color-light-text);
+}
+
+.productivity p  {
+    margin: 0;
+}
+.companys{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem; /* espacio uniforme entre logos */
+  margin: 0 4rem;
+}
+
+.companys img {
+  max-height: 40px; /* tamaño uniforme sin distorsión */
+  width: auto;
+  object-fit: contain;
+}
+
+.final_banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 1rem 3rem
+}
+
+
+.final_banner h1{
+    color: var(--color-dark-text);
+    margin-bottom: 0;
+}
+
+.final_banner p{
+    color: var(--color-light-text);
+    padding: 0 17rem 0 17rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/**PIE DE PAGINA*/
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f3f5;
+  padding: 2rem;
+}
+
+.logo-footer{
+  width: 50px;
+  height: 50px;
+}
+
+.footer-links ul {  
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, auto); /* 3 columnas */
+  column-gap: 3rem;  /* espacio horizontal */
+  row-gap: 1rem;     /* espacio vertical */
+}
