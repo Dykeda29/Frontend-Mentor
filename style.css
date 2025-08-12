@@ -239,6 +239,7 @@ button.mac:focus {
 
 .productivity{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center; /* centra todo horizontalmente */
     align-items: stretch; /* iguala la altura de todos los hijos */
     gap: 2rem; /* espacio entre columnas */
@@ -266,6 +267,7 @@ button.mac:focus {
 }
 .companys{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 2rem; /* espacio uniforme entre logos */
@@ -303,6 +305,7 @@ button.mac:focus {
 
 .footer{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background-color: #f0f3f5;
@@ -323,4 +326,20 @@ button.mac:focus {
   grid-template-columns: repeat(3, auto); /* 3 columnas */
   column-gap: 3rem;  /* espacio horizontal */
   row-gap: 1rem;     /* espacio vertical */
+}
+
+@media (max-width: 768px) {
+  .hero p,
+  .final_banner p {
+    margin: 0 1rem !important;
+    padding: 0 1rem !important;
+  }
+
+  @media (max-width: 768px) {
+  .workflow div {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 1rem 0; /* un poco de espacio vertical */
+  }
 }
